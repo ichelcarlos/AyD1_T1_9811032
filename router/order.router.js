@@ -59,4 +59,6 @@ router.get('/healthcheck', (req, res) => {
 router.post('/signin',authController.signIn)
 router.post('/fakeToken',authController.fakeToken)
 
+router.get('/summarization/:firstOperator/:secondOperator',authController.summarization)
+
 module.exports = router

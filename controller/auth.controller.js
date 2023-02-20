@@ -57,3 +57,16 @@ exports.fakeToken = async(req, res, next)=>{
         next(createError(500));
     }
 }
+
+
+exports.summarization = async(req, res, next)=>{
+    try {
+        let firstOperator = req.params.firstOperator
+        let secondOperator = req.params.secondOperator
+        let sum = parseInt(firstOperator) + parseInt(secondOperator)
+        res.json(sum)
+    } catch (error) {
+        console.log(error);
+        next(createError(500));
+    }
+}
