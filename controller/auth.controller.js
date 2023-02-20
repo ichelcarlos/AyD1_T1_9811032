@@ -70,3 +70,13 @@ exports.summarization = async(req, res, next)=>{
         next(createError(500));
     }
 }
+
+exports.info = async(req, res, next)=>{
+    try {
+        let info = '199811032'
+        res.json(info)
+    } catch (error) {
+        console.log(error);
+        next(createError(500));
+    }
+}
